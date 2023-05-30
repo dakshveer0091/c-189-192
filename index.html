@@ -11,6 +11,21 @@
     <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
     <script src="https://recast-api.donmccurdy.com/aframe-inspector-plugin-recast.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+
+    <script src="./drive.js"></script>
+    <script src="./game.js"></script>
 </head>
+
+<body>
+    <a-scene id="scene" background="color:lightblue" inspector-plugin-recast></a-scene>
+
+        <a-assets>
+            <a-asset-item id="city" src="./assets/low_poly_city/scene.gltf"></a-asset-item>
+            <a-asset-item id="wheel" src="./assets/steering_wheel/scene.gltf"></a-asset-item>
+            <a-asset-item id="collider" src="./assets/navmesh.gltf"></a-asset-item>
+        </a-assets>
+
+        <a-entity id="citySet" gltf-model="#city" position="10 -2.63754 -5" rotation="0 90 0"></a-entity>
+</body>
 
 </html>
